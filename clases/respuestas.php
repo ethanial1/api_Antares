@@ -1,6 +1,6 @@
 <?php
     class respuestas{
-        private $respons = [
+        public $respons = [
             "status" => "ok",
             "result" => array()
         ];
@@ -32,6 +32,15 @@
                 "error_msg" => "Datos enviados incompletos o enviados con formato incorrecto"
             );
             
+            return $this->respons;
+        }
+
+        public function error_500($string = "Error interno del servidor"){
+            $this->respons['status'] = "error";
+            $this->respons['result'] = array(
+                "error_id" => "500",
+                "error_msg" => $string
+            );
             return $this->respons;
         }
     }

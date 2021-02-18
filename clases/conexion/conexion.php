@@ -77,6 +77,11 @@
                 return 0;
             }
         }
+
+        //encripatr
+        protected function encriptar($password){
+            return md5($password);
+        }
     }
 
 ?>
