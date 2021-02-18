@@ -6,7 +6,7 @@
         ];
 
         //el usuario envia info por un método no permitido
-        public function erro_405(){
+        public function error_405(){
             $this->respons['status'] = "error";
             $this->respons['result'] = array(
                 "error_id" => "405",
@@ -15,7 +15,7 @@
             return $this->respons;
         }
 
-        public function erro_200($string = "Datos incorrectos"){
+        public function error_200($string = "Datos incorrectos"){
             $this->respons['status'] = "error";
             $this->respons['result'] = array(
                 "error_id" => "200",
@@ -25,7 +25,7 @@
         }
 
         //datos enviados de forma incorrecta
-        public function erro_400(){
+        public function error_400(){
             $this->respons['status'] = "error";
             $this->respons['result'] = array(
                 "error_id" => "400",
